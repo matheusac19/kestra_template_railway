@@ -9,8 +9,8 @@ kestra:
   server:
     basic-auth:
       enabled: true
-      username: "admin@example.com"
-      password: "muda_essa_senha"
+      username: "<USERNAME>"
+      password: "<PASSWORD>"
   repository:
     type: postgres
   storage:
@@ -22,4 +22,4 @@ kestra:
   tasks:
     tmp-dir:
       path: "/tmp/kestra-wd/tmp"
-  url: "https://<YOUR_RAILWAY_URL>/"   # ex: https://your-service.up.railway.app/
+  url: "https://<RAILWAY_PUBLIC_DOMAIN>/"   # ex: https://your-service.up.railway.app/
