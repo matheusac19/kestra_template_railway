@@ -1,16 +1,16 @@
 datasources:
   postgres:
-    url: "jdbc:postgresql://<POSTGRES_HOST>:<POSTGRES_PORT>/<POSTGRES_DB>"
+    url: "jdbc:postgresql://host:5432/kestra"
     driver-class-name: org.postgresql.Driver
-    username: "<POSTGRES_USER>"
-    password: "<POSTGRES_PASSWORD>"
+    username: "seu_user"
+    password: "sua_senha"
 
 kestra:
   server:
     basic-auth:
       enabled: true
-      username: "<USERNAME>"
-      password: "<PASSWORD>"
+      username: "admin@example.com"
+      password: "mudarAgora"
   repository:
     type: postgres
   storage:
@@ -22,4 +22,4 @@ kestra:
   tasks:
     tmp-dir:
       path: "/tmp/kestra-wd/tmp"
-  url: "https://<RAILWAY_PUBLIC_DOMAIN>/"   # ex: https://your-service.up.railway.app/
+  url: "https://kestratemplaterailway-production.up.railway.app/"
