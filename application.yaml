@@ -1,0 +1,25 @@
+datasources:
+  postgres:
+    url: "jdbc:postgresql://<POSTGRES_HOST>:<POSTGRES_PORT>/<POSTGRES_DB>"
+    driver-class-name: org.postgresql.Driver
+    username: "<POSTGRES_USER>"
+    password: "<POSTGRES_PASSWORD>"
+
+kestra:
+  server:
+    basic-auth:
+      enabled: true
+      username: "admin@example.com"
+      password: "muda_essa_senha"
+  repository:
+    type: postgres
+  storage:
+    type: local
+    local:
+      base-path: "/app/storage"
+  queue:
+    type: postgres
+  tasks:
+    tmp-dir:
+      path: "/tmp/kestra-wd/tmp"
+  url: "https://<YOUR_RAILWAY_URL>/"   # ex: https://your-service.up.railway.app/
